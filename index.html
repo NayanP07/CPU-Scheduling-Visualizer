@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        
+        <a href="landing.html" class="back-link">&larr; Back to Algorithm Info</a>
+        
+        <header>
+            <h1>CPU Scheduling Simulator</h1>
+            <p>Visualize and compare different CPU scheduling algorithms</p>
+        </header>
+
+        <section class="algorithm-selection-container">
+            <label for="algorithm-select">Select Algorithm:</label>
+            <select id="algorithm-select">
+                <option value="fcfs">First Come First Serve</option>
+                <option value="sjf">Shortest Job First</option>
+                <option value="ljf">Largest Job First</option>
+                <option value="srtf">Shortest Remaining Time First</option>
+                <option value="priority">Priority Scheduling</option>
+                <option value="rr">Round Robin</option>
+            </select>
+        </section>
+
+        <section class="info-panel">
+            <div class="info-card algorithm-info">
+                <h3>Algorithm Information</h3>
+                <div id="algorithm-description">
+                    <p>Select an algorithm to see its description.</p>
+                </div>
+            </div>
+             </section>
+        <section class="process-input-container">
+            <h2>Add Processes</h2>
+            <div class="add-process-form">
+                <input type="number" id="arrival-time" placeholder="Arrival Time" min="0">
+                <input type="number" id="burst-time" placeholder="Burst Time" min="1">
+                <input type="number" id="priority-input" placeholder="Priority" min="0" class="hidden">
+                <input type="number" id="quantum-input" placeholder="Quantum" min="1" class="hidden">
+                <button id="add-process-btn">+ Add Process</button>
+            </div>
+        </section>
+
+        <section class="process-table-container">
+            <h2>Current Processes</h2>
+            <table class="process-table">
+                <thead>
+                    <tr>
+                        <th>Process</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                        <th id="priority-col-header" class="hidden">Priority</th>
+                        <th>Color</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="process-table-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <div class="controls">
+            <button id="run-btn">Run Simulation</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <section id="output-container" class="hidden">
+            <div class="gantt-container">
+                <h2>Gantt Chart</h2>
+                <div class="gantt-chart" id="gantt-chart">
+                    </div>
+                <div class="gantt-timeline" id="gantt-timeline">
+                    </div>
+            </div>
+
+            <div class="metrics-cards-container" id="metrics-cards">
+                <div class="metric-card avg-wait">
+                    <h3>Avg Waiting Time</h3>
+                    <span id="avg-wait">0.00</span>
+                </div>
+                <div class="metric-card avg-turnaround">
+                    <h3>Avg Turnaround Time</h3>
+                    <span id="avg-turnaround">0.00</span>
+                </div>
+                <div class="metric-card avg-response">
+                    <h3>Avg Response Time</h3>
+                    <span id="avg-response">0.00</span>
+                </div>
+                <div class="metric-card cpu-util">
+                    <h3>CPU Utilization</h3>
+                    <span id="cpu-util">0.00%</span>
+                </div>
+            </div>
+
+            <div class="metrics-table-container">
+                <h2>Performance Metrics</h2>
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Process</th>
+                            <th>Completion Time</th>
+                            <th>Turnaround Time</th>
+                            <th>Waiting Time</th>
+                            <th>Response Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="metrics-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

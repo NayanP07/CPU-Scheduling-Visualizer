@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Visualizer</title>
+    <link rel="stylesheet" href="landing-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">CPUSchedViz</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#algorithms">Algorithms</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>CPU Scheduling Visualizer</h1>
+            <p class="subtitle">Visualize and understand CPU scheduling algorithms through interactive simulations.</p>
+            <a href="index.html" class="cta-button">Start Scheduling &rarr;</a>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-microchip" style="font-size: 15rem; color: #4a90e2;"></i>
+        </div>
+    </header>
+
+    <section id="features" class="features-section">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-eye icon"></i>
+                <h3>Visual Learning</h3>
+                <p>See algorithms in action with step-by-step visualizations of process execution.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tachometer-alt icon"></i>
+                <h3>Gantt Chart</h3>
+                <p>Generates a clear Gantt chart for every simulation to track process execution over time.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-cogs icon"></i>
+                <h3>Custom Processes</h3>
+                <p>Define your own processes with custom arrival, burst, and priority times.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-bar icon"></i>
+                <h3>Detailed Metrics</h3>
+                <p>Calculates all key performance metrics: AT, AWT, ART, and CPU Utilization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="algorithms" class="algorithms-section">
+        <h2>Algorithms</h2>
+        <div class="algorithms-grid">
+            
+            <div class="algorithm-card">
+                <h3>First-Come, First-Served (FCFS)</h3>
+                <p>Processes are executed in the order they arrive in the ready queue.</p>
+            </div>
+
+            <div class="algorithm-card">
+                <h3>Shortest Job First (SJF)</h3>
+                <p>Selects the waiting process with the smallest burst time to execute next (non-preemptive).</p>
+            </div>
+            
+            <div class="algorithm-card">
+                <h3>Largest Job First (LJF)</h3>
+                <p>Selects the waiting process with the largest burst time to execute next (non-preemptive).</p>
+            </div>
+
+            <div class="algorithm-card">
+                <h3>Shortest Remaining Time First (SRTF)</h3>
+                <p>Preemptive version of SJF; chooses process with shortest remaining burst time.</p>
+            </div>
+
+            <div class="algorithm-card">
+                <h3>Priority Scheduling</h3>
+                <p>Processes are executed based on an assigned priority (lower number = higher priority).</p>
+            </div>
+
+            <div class="algorithm-card">
+                <h3>Round Robin (RR)</h3>
+                <p>Time quantum-based preemptive scheduling for fair CPU time distribution.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About This Project</h2>
+        <p>This CPU Scheduling Visualizer was created to help students and developers understand complex CPU scheduling algorithms. By providing interactive simulations, users can gain insights into their efficiency and implementation. Explore how different algorithms manage processes and impact system performance.</p>
+        <a href="index.html" class="cta-button">Start Scheduling Now &rarr;</a>
+    </section>
+
+</body>
+</html>

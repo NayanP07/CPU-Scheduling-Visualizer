@@ -1,0 +1,357 @@
+:root {
+    --primary-color: #007bff; /* Vibrant Blue */
+    --secondary-color: #28a745; /* Green */
+    --danger-color: #dc3545; /* Red */
+    --warning-color: #ffc107; /* Yellow */
+    --purple-color: #6f42c1; /* Purple */
+
+    --bg-light: #f4f7f6; /* Light Gray BG */
+    --card-color: #ffffff;
+    --text-primary: #2c3e50;
+    --text-secondary: #5a6a79;
+    --border-color: #dee2e6;
+    --border-radius: 8px;
+    --shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+/* STYLES for Algorithm Dropdown */
+.algorithm-selection-container {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.algorithm-selection-container label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+select#algorithm-select {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    min-width: 300px;
+    cursor: pointer;
+}
+/* END OF DROPDOWN STYLES */
+
+/* STYLES FOR INFO PANEL - MODIFIED */
+.info-panel {
+    display: grid;
+    grid-template-columns: 1fr; /* Changed from 2fr 1fr */
+    gap: 1.5rem;
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.info-panel .info-card {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.info-panel h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.algorithm-info p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Complexity styles removed */
+/* END OF INFO PANEL STYLES */
+
+
+/* Process Input */
+.add-process-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+input[type="number"] {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    width: 150px;
+}
+
+input[type="number"]::placeholder {
+    color: var(--text-secondary);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-process-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#add-process-btn:hover {
+    opacity: 0.9;
+}
+
+/* Process Table */
+.process-table-container {
+    overflow-x: auto;
+}
+
+.process-table, .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.process-table th, .process-table td,
+.metrics-table th, .metrics-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.process-table th, .metrics-table th {
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--bg-light);
+}
+
+.color-swatch {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+#run-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+#reset-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Output Section */
+#output-container {
+    margin-top: 3rem;
+    border-top: 2px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.gantt-container {
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem; /* Space for timeline */
+}
+
+.gantt-chart {
+    display: flex;
+    height: 50px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: max-content; /* Allow chart to grow */
+    min-width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.gantt-block {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    padding: 0 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.gantt-block.idle {
+    background: repeating-linear-gradient(
+        45deg,
+        #e9ecef,
+        #e9ecef 10px,
+        #f8f9fa 10px,
+        #f8f9fa 20px
+    );
+    color: var(--text-secondary);
+    text-shadow: none;
+}
+
+.gantt-timeline {
+    display: flex;
+    width: max-content; /* Match chart width */
+    min-width: 100%;
+    margin-top: 0.5rem;
+}
+
+.gantt-time-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.gantt-time-marker::before {
+    content: '|';
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+/* Metrics Cards */
+.metrics-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.metric-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.metric-card span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.metric-card.avg-wait span { color: var(--primary-color); }
+.metric-card.avg-turnaround span { color: var(--secondary-color); }
+.metric-card.avg-response span { color: var(--warning-color); }
+.metric-card.cpu-util span { color: var(--purple-color); }
+
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Media Query */
+@media (max-width: 992px) {
+    .info-panel {
+        grid-template-columns: 1fr;
+    }
+}
